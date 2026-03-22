@@ -1,41 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon</title>
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQo89b34aNTKdsoMPrVMAlhYKA097oScrwg&s">
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQo89b34aNTKdsoMPrVMAlhYKA097oScrwg&s" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <div class="contenedorDePagina">
-        <div class="imagenes">
-            <img src="./img/pokedex (1).png" alt="">
-        
+
+  <div class="bg-particles" id="bgParticles"></div>
+
+  <div class="pokedex-shell">
+
+    <header class="pokedex-header">
+      <div class="header-light" id="headerLight"></div>
+      <h1 class="logo">POKÉDEX</h1>
+      <button class="music-btn" id="musicBtn" title="Música">
+        <span class="music-icon">♪</span>
+        <span class="music-label" id="musicLabel">ON</span>
+      </button>
+    </header>
+
+    <main class="screen-area">
+
+      <div class="sprite-frame">
+        <div class="sprite-glow" id="spriteGlow"></div>
+        <img id="imgPokemon"
+          src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
+          alt="Pokémon" />
+        <div class="scanline"></div>
+      </div>
+
+      <div class="info-panel">
+        <p class="pokemon-id" id="pokemonId">#???</p>
+        <h2 class="pokemon-name" id="pokemonName">Elige un Pokémon</h2>
+
+        <div class="types-row" id="typesRow"></div>
+
+        <div class="measures">
+          <div class="measure-item">
+            <span class="measure-label">Altura</span>
+            <span class="measure-value" id="pokemonHeight">—</span>
+          </div>
+          <div class="measure-item">
+            <span class="measure-label">Peso</span>
+            <span class="measure-value" id="pokemonWeight">—</span>
+          </div>
         </div>
 
-        <div class="infoPokemon">
-             <p id="idNombre"> ID - Nombre </p>
+        <div class="stats-section">
+          <p class="stats-title">BASE STATS</p>
+          <div class="stats-grid" id="statsGrid"></div>
         </div>
-        
-        <div class="imgPokemon">
-             <img  id="imgPokemon" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="">
-        </div>
-        <div class="botones">
-           
-             <input type="text" id="searchPokemon" placeholder= "Name or Number">  
-             <div>
-                <button id="prev"> pre < </button>
-                <button id="next">next > </button>
-             </div>
-       
-        </div>
+      </div>
+    </main>
 
-    </div>
+    <footer class="controls">
+      <input type="text" id="searchPokemon" placeholder="Nombre o número…" autocomplete="off" />
+      <div class="nav-btns">
+        <button id="prev">◀ Prev</button>
+        <button id="next">Next ▶</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="./script/script.js"></script>
 </body>
-<script src="./script/script.js">
-</script>
 </html>
-
-
-
